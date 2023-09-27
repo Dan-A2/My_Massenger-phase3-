@@ -1,0 +1,26 @@
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- Database connection setting -->
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/Project_3</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">pilot380747</property>
+        <property name="show_sql">false</property>
+<!--        <property name="connection.pool_size">1</property>-->
+
+        <!-- SQl dialect -->
+        <property name="dialect">org.hibernate.dialect.PostgreSQL10Dialect</property>
+        <!-- update the database schema on startup -->
+        <property name="hbm2ddl.auto">update</property>
+
+        <mapping class="ir.sharif.ap.phase3.model.main.Chat"/>
+        <mapping class="ir.sharif.ap.phase3.model.main.GroupChat"/>
+        <mapping class="ir.sharif.ap.phase3.model.main.Tweet_Comment"/>
+        <mapping class="ir.sharif.ap.phase3.model.main.User"/>
+        <mapping class="ir.sharif.ap.phase3.model.main.Message"/>
+        <mapping class="ir.sharif.ap.phase3.model.main.Notification"/>
+        <mapping class="ir.sharif.ap.phase3.model.main.UserList"/>
+
+    </session-factory>
+</hibernate-configuration>
